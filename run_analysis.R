@@ -1,5 +1,4 @@
 
-setwd("UCI HAR Dataset")
 library(dplyr)
 
 # Load activity labels
