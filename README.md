@@ -17,9 +17,9 @@ The goal is to prepare tidy data that can be used for later analysis, and that m
 - A 73-feature vector containing average and standard deviation variables from the original dataset.
 
 ## The project includes the following files:
-- 'README.txt'
-- 'CodeBook.md'
-- 'run_analysis.R'
+- 'README.txt' - Describes the project
+- 'CodeBook.md' - Describes the data, and the steps to produce it
+- 'run_analysis.R' - Tidies and processes the data to meet the project specifications
 
 ## This project applies the following changes to the data:
 - The Test and Train datasets are merged into a single dataset.
