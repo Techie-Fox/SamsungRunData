@@ -1,4 +1,4 @@
-Getting and Cleaning Data Course Project Dataset
+# Getting and Cleaning Data Course Project Dataset
 Version 1.0
 
 Description of this project:
