@@ -1,9 +1,8 @@
-==================================================================
 Getting and Cleaning Data Course Project Dataset
 Version 1.0
-==================================================================
-Lawrence Gulliver
-==================================================================
+
+Description of this project:
+=========================================
 
 A script to collect and clean the data provided in the UCI HAR Dataset for the "Getting and Cleaning Data" Course Project, hosted by Coursera.
 - The original dataset is available at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -23,24 +22,19 @@ Each record is provided with:
 - Its activity label.
 - A 73-feature vector containing average and standard deviation variables from the original dataset.
 
-The dataset includes the following files:
+The project includes the following files:
 =========================================
 
 - 'README.txt'
-
 - 'CodeBook.md'
-
 - 'run_analysis.R'
 
 This project applies the following changes to the data:
 =========================================
 
 - The Test and Train datasets are merged into a single dataset.
-
 - All variables that are not a mean or a standard deviation are removed.
-
 - The activity identifier for each observation is replaced with the name of the activity.
-
 - Variables are renamed for usability as column names by replacing all sets of non-alphanumeric characters with periods.
 
 Notes: 
