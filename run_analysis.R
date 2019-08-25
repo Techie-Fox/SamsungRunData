@@ -12,7 +12,7 @@ colnames(feature_labels) <- c("id", "label")
 
 # Function to retrieve one dataset
 getActivityData <- function(path) {
-    dat <- cbind(
+    cbind(
         # Subject column
         read.table(paste0(path, "/", "subject_", path, ".txt"), col.names = c("subject")),
         # Activity column
