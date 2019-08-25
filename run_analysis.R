@@ -11,7 +11,7 @@ feature_labels <- read.table("features.txt", stringsAsFactors = FALSE)
 colnames(feature_labels) <- c("id", "label")
 # Clean non-alphanumeric characters
 feature_labels$label <- gsub("[^a-z|^A-Z|^0-9]+", ".", feature_labels$label)
-feature_labels$label <- gsub("/.$", "", feature_labels$label)
+feature_labels$label <- gsub("[/.]$", "", feature_labels$label)
 
 # Function to retrieve one dataset
 getActivityData <- function(path) {
@@ -26,7 +26,8 @@ getActivityData <- function(path) {
         # Data columns
         select(
             read.table(paste0(path, "/", "X_", path, ".txt"), col.names = feature_labels$label), 
-            contains("mean."), contains("std.")    # Select only averages and standard deviations
+            # Select only averages and standard deviations
+            contains("mean"), contains("std"), -contains("Freq", ignore.case = FALSE)
         )
     )
 }
