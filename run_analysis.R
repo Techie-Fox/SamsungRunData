@@ -7,8 +7,9 @@ activity_labels <- read.table("activity_labels.txt")
 colnames(activity_labels) <- c("id", "label")
 
 # Load feature labels
-feature_labels <- read.table("features.txt")
+feature_labels <- read.table("features.txt", stringsAsFactors = FALSE)
 colnames(feature_labels) <- c("id", "label")
+feature_labels$label <- gsub("\\(\\)", "", feature_labels$label)
 
 # Function to retrieve one dataset
 getActivityData <- function(path) {
