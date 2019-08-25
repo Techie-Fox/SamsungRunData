@@ -9,7 +9,9 @@ colnames(activity_labels) <- c("id", "label")
 # Load feature labels
 feature_labels <- read.table("features.txt", stringsAsFactors = FALSE)
 colnames(feature_labels) <- c("id", "label")
-feature_labels$label <- gsub("\\(\\)", "", feature_labels$label)
+# Clean non-alphanumeric characters
+feature_labels$label <- gsub("[^a-z|^A-Z|^0-9]+", ".", feature_labels$label)
+feature_labels$label <- gsub("/.$", "", feature_labels$label)
 
 # Function to retrieve one dataset
 getActivityData <- function(path) {
