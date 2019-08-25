@@ -32,8 +32,7 @@ getActivityData <- function(path) {
 }
 
 # Retrieve and merge both Test and Train datasets
-run_data <- rbind(getActivityData("Test"), getActivityData("Train"))
+samsung_data <- rbind(getActivityData("Test"), getActivityData("Train"))
 
 # Clean up
 rm(getActivityData, activity_labels, feature_labels)
-
